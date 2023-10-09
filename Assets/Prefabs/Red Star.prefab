@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8147277869923455063}
   - component: {fileID: 8190583499467352397}
   - component: {fileID: 7105388681431625648}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,8 @@ GameObject:
   - component: {fileID: 8092149253460373091}
   - component: {fileID: 8943475872222109461}
   - component: {fileID: 4424440768095514663}
-  m_Layer: 0
+  - component: {fileID: 5718857188440559292}
+  m_Layer: 6
   m_Name: Red Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7797567703855433485}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -141,7 +142,7 @@ Transform:
   - {fileID: 8810851367697793973}
   - {fileID: 8182886585904886061}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!33 &4498929650214630529
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -225,6 +226,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73e9bf54ce71458e947a541282a22ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &5718857188440559292
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7797567703855433485}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &8815303693205985049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,6 +264,18 @@ PrefabInstance:
     - target: {fileID: 1164574174434188, guid: 82e26fdec8c20ea4f8147ba8b19c91d6, type: 3}
       propertyPath: m_Name
       value: Star
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164574174434188, guid: 82e26fdec8c20ea4f8147ba8b19c91d6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164574174434188, guid: 82e26fdec8c20ea4f8147ba8b19c91d6, type: 3}
+      propertyPath: m_TagString
+      value: Gem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1702308403539004, guid: 82e26fdec8c20ea4f8147ba8b19c91d6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4554881283069100, guid: 82e26fdec8c20ea4f8147ba8b19c91d6, type: 3}
       propertyPath: m_LocalPosition.x
