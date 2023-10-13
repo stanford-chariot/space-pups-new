@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class CharactersSelection : MonoBehaviour
 {
+    
     [SerializeField] private InputAction characterSelectArrows;
 
     private GameObject[] characterList;
@@ -25,6 +27,7 @@ public class CharactersSelection : MonoBehaviour
 
     private void Start()
     {
+        index = PlayerPrefs.GetInt("CharacterSelected");
         // Create an array
         characterList = new GameObject[transform.childCount];
 
@@ -41,9 +44,9 @@ public class CharactersSelection : MonoBehaviour
         }
 
         // We toggle on the first index
-        if (characterList[0])
+        if (characterList[index])
         {
-            characterList[0].SetActive(true);
+            characterList[index].SetActive(true);
         }
     }
 
@@ -58,6 +61,12 @@ public class CharactersSelection : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             ToggleRight();
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            PlayerPrefs.SetInt("CharacterSelected", index);
+            SceneManager.LoadScene("PlayScene");
         }
     }
 
